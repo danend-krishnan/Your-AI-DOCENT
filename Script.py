@@ -54,7 +54,7 @@ def dub_video():
             root.update_idletasks()
 
             converted_audio_path = "converted_audio.wav"
-            model_path = "C:\\Users\\Administrator\\OneDrive\\Desktop\\vosk-model-small-en-us-0.15\\vosk-model-small-en-us-0.15"
+            model_path = "YOUR MODEL PATH"
             translated_audio_path = "translated_audio.mp3"
             new_video_path = "new_video_with_translated_audio.mp4"
 
@@ -165,9 +165,9 @@ def animate(i):
     ax.grid(True, color='gray')
 
 def update_test_accuracy():
-    random_value = random.uniform(75, 85)  # Generate a random value between 75 and 85
+    random_value = random.uniform(75, 85)  
     test_accuracy_label.config(text=f"Training Accuracy: {random_value:.2f}%")
-    root.after(10000, update_test_accuracy)  # Update every 1 second
+    root.after(10000, update_test_accuracy)  
 
 
 def update_color():
@@ -187,8 +187,7 @@ color_index = 0
 frame_left = tk.Frame(root, bg='black', width=400)
 frame_left.pack(side=tk.LEFT, fill=tk.Y, padx=5, pady=20)
 test_accuracy_label = tk.Label(frame_left, text="Test Accuracy: 0%", bg='black', fg='white', font=("Helvetica", 12))
-test_accuracy_label.pack(side=tk.BOTTOM, pady=(20, 5))  # Adjust pady as needed
-
+test_accuracy_label.pack(side=tk.BOTTOM, pady=(20, 5))  +
 
 frame_center = tk.Frame(root, bg='black')
 frame_center.pack(side=tk.RIGHT, fill=tk.BOTH, expand=True)
